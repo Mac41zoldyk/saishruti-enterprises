@@ -1,0 +1,84 @@
+{
+  "theme": "light",
+  "archetype": "4 and 5 fusion (Swiss Brutalist + Luxury)",
+  "design_philosophy": "A fusion of luxury elegance, modern minimalism, and bold editorial. An architectural approach prioritizing heavy negative space, oversized serif typography paired with clean sans, and staggered, asymmetric imagery to convey high-end interior design and civil contracting.",
+  "colors": {
+    "background": "#F7F5F0",
+    "foreground": "#1A1A1A",
+    "primary": "#1A1A1A",
+    "primary_foreground": "#FFFFFF",
+    "accent": "#9B6A4A",
+    "accent_foreground": "#FFFFFF",
+    "muted": "#EAE6E1",
+    "muted_foreground": "#5C5C5C",
+    "border": "#DCD7D0"
+  },
+  "typography": {
+    "font_family_headings": "Cormorant Garamond, serif",
+    "font_family_body": "Outfit, sans-serif",
+    "heading_strategy": "Oversized, elegant serif. Use tracking-tighter for impact. Mix regular and italic weights within the same headline for a bold editorial feel.",
+    "body_strategy": "Clean, geometric but soft sans-serif for high readability and modern contrast.",
+    "sizes": {
+      "h1": "text-5xl md:text-7xl lg:text-[6rem] leading-none tracking-tight",
+      "h2": "text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight",
+      "h3": "text-2xl md:text-3xl lg:text-4xl leading-snug",
+      "body": "text-base md:text-lg leading-relaxed text-muted-foreground",
+      "overline": "text-xs md:text-sm uppercase tracking-[0.2em] font-sans font-semibold"
+    }
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous. Use py-24 or py-32 for section padding. Container max-width should be expansive, leaving room for asymmetrical image placements.",
+    "grid_strategy": "Editorial/Tetris grid. Avoid perfectly symmetrical 3-column layouts. Mix col-span-4, col-span-8 to create staggered masonry feels.",
+    "alignment": "Optical alignment over center alignment. Mostly left-aligned heavy typography with right-aligned or staggered imagery."
+  },
+  "motion_and_interaction": {
+    "scroll": "Smooth scrolling mandatory (Lenis).",
+    "reveal": "Framer motion staggered text reveals (words or characters sliding up from a hidden overflow container).",
+    "parallax": "Images should have a subtle parallax effect on scroll (using transform translateY based on scroll position).",
+    "hover": "Interactive image reveals on the Services list (e.g., hovering over '3DS Max' reveals a floating image). Buttons should have an elegant background fill animation.",
+    "marquee": "Slow, organic editorial ribbon using serif font, e.g., 'SAISHRUTI ENTERPRISES — INTERIOR DESIGN — CIVIL CONTRACTOR' with massive gaps."
+  },
+  "components": {
+    "navigation": "Sticky transparent nav that blurs (glassmorphism: backdrop-blur-xl bg-[#F7F5F0]/70) on scroll. Simple text links, no heavy buttons.",
+    "hero": "Full viewport height. Massive typography split across multiple lines, with an overlapping hero image that has a parallax scroll effect.",
+    "services": "List-based layout (not cards). Massive font size for each service name, with a border-b separating them. On hover, show the relevant image or slide an arrow icon.",
+    "portfolio": "Masonry or staggered asymmetrical layout. Images should not align perfectly on the horizontal axis.",
+    "testimonials": "Editorial layout. A very large serif quote mark, oversized italicized text for the quote, and small sans-serif for the client name.",
+    "contact": "Minimalist form using Shadcn. Inputs should have only border-b (flushed inputs) to look like a high-end editorial form rather than a typical SaaS boxed input."
+  },
+  "media": {
+    "hero_image": {
+      "url": "https://images.pexels.com/photos/12441654/pexels-photo-12441654.jpeg",
+      "alt": "Modern open-plan living area representing elegant interior design",
+      "usage": "Main hero section overlay or right-aligned parallax image"
+    },
+    "about_image": {
+      "url": "https://images.pexels.com/photos/34688219/pexels-photo-34688219.jpeg",
+      "alt": "Spacious modern luxury living room",
+      "usage": "Side image in the About section to anchor the 5-year story"
+    },
+    "services_images": {
+      "interior_design": "https://images.pexels.com/photos/33394157/pexels-photo-33394157.jpeg",
+      "autocad": "https://images.unsplash.com/photo-1757344454333-cc666252e596",
+      "civil_contractor": "https://images.pexels.com/photos/17843703/pexels-photo-17843703.jpeg"
+    },
+    "gallery": [
+      "https://images.unsplash.com/photo-1719782758766-f0a4a3808afe",
+      "https://images.unsplash.com/photo-1774301266018-57c0b190ed43",
+      "https://images.pexels.com/photos/12281850/pexels-photo-12281850.jpeg",
+      "https://images.pexels.com/photos/6283973/pexels-photo-6283973.jpeg",
+      "https://images.unsplash.com/photo-1640109229792-a26a0ee366ff",
+      "https://images.pexels.com/photos/33296839/pexels-photo-33296839.jpeg"
+    ]
+  },
+  "specific_instructions_for_main_agent": [
+    "Install and use '@studio-freight/react-lenis' for smooth scrolling.",
+    "Install and use 'framer-motion' for all reveal animations, parallax, and micro-interactions.",
+    "Install and use 'lucide-react' for minimal, elegant icons.",
+    "Use Google Fonts: 'Cormorant Garamond' and 'Outfit'. Update index.css to import these.",
+    "In Tailwind config, extend colors using the provided hex values under CSS variables.",
+    "The Contact form must collect Name, Email, Phone, Project Type, and Message, and implement a mock database save or form submission simulation.",
+    "Do NOT use the generic Shadcn 'Card' component with its borders for the design; build custom DOM structures that fit the editorial/asymmetrical layout.",
+    "For inputs in the contact form, style them with 'border-0 border-b border-black/20 rounded-none bg-transparent focus-visible:ring-0 focus-visible:border-black' to get the luxury editorial look."
+  ]
+}
